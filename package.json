@@ -1,0 +1,25 @@
+{
+  "name": "@fabienzucchet/plop-example-generator",
+  "repository": "https://github.com/fabienzucchet/plop-example-generator.git",
+  "version": "1.0.4",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/templates/**/*.hbs dist/",
+    "build": "pnpm clean && tsc && pnpm copyfiles",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "plop": "^4.0.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2"
+  }
+}
